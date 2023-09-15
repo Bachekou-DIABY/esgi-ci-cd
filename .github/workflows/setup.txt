@@ -1,0 +1,13 @@
+name: Bonjour
+on:
+  - push
+jobs:
+  container-test-job:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/dduportal/esgi-gitpod
+      options: --user=root
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install
+      - run: npm run lint

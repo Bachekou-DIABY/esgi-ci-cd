@@ -22,4 +22,5 @@ jobs:
         with:
           push: true
           context: ./
-          tags: moshtek/sayhello:${{ github.ref_name }}
+          tags: moshtek/sayhello:1.0.5
+      - run: cat README.md
